@@ -33,23 +33,14 @@ export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
 Welcome to my website!
 More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+'github' - My project portfolio
+'linkedin' - My social media (Say Hi! to me)
+'resume' - my latest resume.`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
   return 'Opening resume...';
-};
-
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
 };
 
 // Contact
@@ -76,21 +67,6 @@ export const google = async (args: string[]): Promise<string> => {
   return `Searching google for ${args.join(' ')}...`;
 };
 
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
-};
-
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
-};
-
 // Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
@@ -109,8 +85,7 @@ directories`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `unfortunately, i cannot afford more directories.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -141,17 +116,22 @@ export const sudo = async (args?: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+
+███████╗ █████╗ ██╗██████╗  █████╗ ███╗   ███╗    ██████╗  ██████╗ ██╗  ██╗██╗  ██╗ █████╗ 
+██╔════╝██╔══██╗██║██╔══██╗██╔══██╗████╗ ████║    ██╔══██╗██╔═══██╗██║ ██╔╝██║ ██╔╝██╔══██╗
+███████╗███████║██║██████╔╝███████║██╔████╔██║    ██████╔╝██║   ██║█████╔╝ █████╔╝ ███████║
+╚════██║██╔══██║██║██╔══██╗██╔══██║██║╚██╔╝██║    ██╔══██╗██║   ██║██╔═██╗ ██╔═██╗ ██╔══██║
+███████║██║  ██║██║██║  ██║██║  ██║██║ ╚═╝ ██║    ██████╔╝╚██████╔╝██║  ██╗██║  ██╗██║  ██║
+╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+                    
+            Security Analyst - Software Engineer - ML Engineer - Lifelong learner
+
+
+* Hi! Welcome to my portfolio website. I am a Security focused Software Engineer.
+* Masters of Science in Cybersecurity from the University of Maryland Baltimore County.
 
 Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+Connect with me on LinkedIn! -> <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.social.linkedin}" target="_blank">here</a></u>.
 `;
 };

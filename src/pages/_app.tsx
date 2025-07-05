@@ -1,12 +1,14 @@
+// src/pages/_app.tsx
 import React from 'react';
-import '../styles/global.css';
-import Head from 'next/head';
+import '../styles/global.css'; //
+import Head from 'next/head'; //
+import ThemeSwitcher from '../components/themeSwitcher';
 
-const App = ({ Component, pageProps }) => {
-  const inputRef = React.useRef<HTMLInputElement>(null);
+const App = ({ Component, pageProps }) => { //
+  const inputRef = React.useRef<HTMLInputElement>(null); //
 
-  const onClickAnywhere = () => {
-    inputRef.current.focus();
+  const onClickAnywhere = () => { //
+    inputRef.current.focus(); //
   };
 
   return (
@@ -21,9 +23,10 @@ const App = ({ Component, pageProps }) => {
       </Head>
 
       <div
-        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"
+        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base relative" // Add 'relative' here
         onClick={onClickAnywhere}
       >
+        <ThemeSwitcher />
         <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
           <Component {...pageProps} inputRef={inputRef} />
         </main>
