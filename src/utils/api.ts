@@ -3,7 +3,7 @@ import config from '../../config.json';
 
 export const getProjects = async () => {
   const { data } = await axios.get(
-    `https://api.github.com/users/sairambokka/repos`,
+    `https://api.github.com/users/${config.social.github}/repos`,
   );
   return data;
 };
@@ -20,11 +20,4 @@ export const getWeather = async (city: string) => {
   } catch (error) {
     return error;
   }
-};
-
-export const getQuote = async () => {
-  const { data } = await axios.get('https://api.quotable.io/quotes/random?limit=1');
-  return {
-    quote: `“${data.content}” — ${data.author}`,
-  };
 };

@@ -131,7 +131,7 @@ export const banner = (args?: string[]): string => {
 * Masters of Science in Cybersecurity from the University of Maryland Baltimore County.
 
 Type 'help' to see the list of available commands.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-Connect with me on LinkedIn! -> <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.social.linkedin}" target="_blank">here</a></u>.
+Type 'github' to see my latest inventions!
+Connect with me on LinkedIn by typing 'linkedin'
 `;
 };
