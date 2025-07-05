@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/global.css'; //
 import Head from 'next/head'; //
-import ThemeSwitcher from '../components/themeSwitcher';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 const App = ({ Component, pageProps }) => { //
   const inputRef = React.useRef<HTMLInputElement>(null); //
